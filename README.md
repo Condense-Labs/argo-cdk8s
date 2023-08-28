@@ -20,7 +20,7 @@ repoServer:
       securityContext:
         runAsNonRoot: true
         runAsUser: 999     # This is the ArgoCD user; the Dockerfile uses a named ID which k8s doesn't recognise
-      image: ghcr.io/condense-labs/argocd:v2.8.2
+      image: ghcr.io/condense-labs/argo-cdk8s:v2.8.2
       imagePullPolicy: IfNotPresent
       command: [/var/run/argocd/argocd-cmp-server]
       volumeMounts:
